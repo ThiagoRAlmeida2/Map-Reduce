@@ -1,4 +1,4 @@
-**Atividade:**
+### Desafio
 
 - **Sistema:** Um sistema web que oferece funcionalidades como gestão de cursos, matrículas, notas, e calendário acadêmico.
 - **Usuários Atuais:** 200 alunos.
