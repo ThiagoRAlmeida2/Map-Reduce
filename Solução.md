@@ -63,33 +63,30 @@ Para a expansão do software, será necessário fazer uma "quebra" dos component
     - Load balancer na frente para distribuir as requisições dos usuários entre as máquinas.
 
 ```mermaid
----
-config:
-  theme: neo-dark
----
 graph TD
-subgraph "Requisições"
-User[Usuários]
-end
-subgraph "Load Balancer Inicial"
-LB1[Load Balancer 1]
-end
-subgraph "Máquinas de Requisições de Usuários"
-U1(Máquina 5-14: Aplicação)
-end
-subgraph "Load Balancer Secundário"
-LB2[Load Balancer 2]
-end
-subgraph "Máquinas Principais"
-A1(Máquina 1-2: Back-End)
-A2(Máquina 2-4: Front-End)
-A3(Máquina 5: Banco de Dados)
-A4(Máquina 6: Interface com a Cloud)
-end
-subgraph "Banco de Dados"
-E1[Banco de Dados Distribuído]
-E2[Implementar Cache]
-end
+  subgraph "Requisições"
+  User[Usuários]
+  end
+  subgraph "Load Balancer Inicial"
+  LB1[Load Balancer 1]
+  end
+  subgraph "Máquinas de Requisições de Usuários"
+  U1(Máquina 5-14: Aplicação)
+  end
+  subgraph "Load Balancer Secundário"
+  LB2[Load Balancer 2]
+  end
+  subgraph "Máquinas Principais"
+  A1(Máquina 1-2: Back-End)
+  A2(Máquina 2-4: Front-End)
+  A3(Máquina 5: Banco de Dados)
+  A4(Máquina 6: Interface com a Cloud)
+  end
+  subgraph "Banco de Dados"
+  E1[Banco de Dados Distribuído]
+  E2[Implementar Cache]
+  end
+  
 User --> LB1
 LB1 --> U1
 U1 --> LB2
